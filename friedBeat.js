@@ -8,8 +8,6 @@ var app = function(){
     
 	const indicator = document.querySelector('.beatmaker__indicator');
     
-    console.log(indicator);
-    
 	const playBut = document.querySelector('.beatmaker__play');
     
 	const stopBut = document.querySelector('.beatmaker__stop');
