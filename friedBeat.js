@@ -94,12 +94,13 @@ var app = function(){
 	        then = now - (delta % interval);
 
 	        if(counter <= 16) {
-				var currIndicator = counter == 0 ? document.querySelector('.indicator_1') : document.querySelector('.indicator_' + counter);
-				currIndicator.style.opacity = 0.1;
-				currIndicator.out = setTimeout(function(){ currIndicator.style.opacity = 0; }, interval);
-				rows.forEach(row => {
-					if(row.children[counter].classList.contains('active')) {
-						playSound(row.children[counter].getAttribute('data-key'));
+                
+var currIndicator = counter == 0 ? document.querySelector('.indicator_1') : document.querySelector('.indicator_' + counter);
+currIndicator.style.opacity = 0.1;
+currIndicator.out = setTimeout(function(){ currIndicator.style.opacity = 0; }, interval);
+rows.forEach(row => {
+if(row.children[counter].classList.contains('active')) {
+playSound(row.children[counter].getAttribute('data-key'));
 					}
 			 	})
 			 	//this takes care of the delay after the last beat is played
